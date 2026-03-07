@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Showcase | MBC</title>
+    <meta name="description" content="High-resolution 4K aerial drone photography showcase from Modern Business Consultants.">
+
+    <meta property="og:title" content="Drone Showcase | Modern Business Consultants">
+    <meta property="og:description" content="High-resolution 4K aerial drone photography from our recent operations.">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://modernworldcomputing.github.io/droneshowcase.html">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="logo">Modern Business <span>Consultants</span></a>
+</header>
+
+<main>
+    <section>
+        <div class="gallery-container">
+            <a href="creative-media.html" class="back-nav">&larr; Back to Creative Media</a>
+
+            <div class="section-title gallery-title">
+                <h1>Aerial <span>Perspectives.</span></h1>
+                <p>High-resolution 4K capture from our recent operations.</p>
+            </div>
+
+            <div class="showcase-grid">
+                <div class="showcase-item">
+                    <img src="images/drone1.JPG" alt="Aerial view of neighborhood from 400 feet" loading="lazy" onclick="openLightbox(this.src)">
+                    <div class="caption">
+                        <h3>Site Overview</h3>
+                        <p>Capture of neighborhood from 400ft above</p>
+                    </div>
+                </div>
+
+                <div class="showcase-item">
+                    <img src="images/drone2.JPG" alt="Aerial landscape showing environmental context" loading="lazy" onclick="openLightbox(this.src)">
+                    <div class="caption">
+                        <h3>Landscape</h3>
+                        <p>Environmental context and surroundings</p>
+                    </div>
+                </div>
+
+                <div class="showcase-item">
+                    <img src="images/drone3.JPG" alt="Aerial landscape with surrounding terrain" loading="lazy" onclick="openLightbox(this.src)">
+                    <div class="caption">
+                        <h3>Landscape</h3>
+                        <p>Environmental context and surroundings</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Need high quality shots?</h2>
+        <a href="mailto:modernbusinessconsultants@gmail.com" class="btn">Request a Quote</a>
+    </section>
+</main>
+
+<footer>
+    <img src="images/mbc-logo.png" alt="Modern Business Consultants Logo" class="footer-logo" loading="lazy">
+    <p>&copy; 2025 Modern Business Consultants. All Rights Reserved.</p>
+    <button class="mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
+        <span id="mode-icon">🌙</span> <span id="mode-text">Switch to Dark Mode</span>
+    </button>
+</footer>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()" role="dialog" aria-label="Image viewer">
+    <img id="lightbox-img" src="" alt="Expanded drone image">
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
