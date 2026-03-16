@@ -56,6 +56,26 @@ document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') closeLightbox();
 });
 
+/* --- Mobile Menu Toggle --- */
+function toggleMenu() {
+    var nav = document.getElementById('main-nav');
+    var btn = document.querySelector('.menu-toggle');
+    if (nav) nav.classList.toggle('open');
+    if (btn) btn.classList.toggle('active');
+}
+
+/* Close mobile menu when a nav link is clicked */
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('#main-nav a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            var nav = document.getElementById('main-nav');
+            var btn = document.querySelector('.menu-toggle');
+            if (nav) nav.classList.remove('open');
+            if (btn) btn.classList.remove('active');
+        });
+    });
+});
+
 /* --- Smooth scroll for anchor links --- */
 document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {

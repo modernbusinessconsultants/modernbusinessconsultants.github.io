@@ -9,13 +9,31 @@
     <meta property="og:title" content="Web & SEO | Modern Business Consultants">
     <meta property="og:description" content="High-speed websites and SEO that captures leads while you sleep.">
     <meta property="og:type" content="website">
-    <link rel="canonical" href="https://modernworldcomputing.github.io/web-seo.html">
+    <meta property="og:url" content="https://modernbusinessconsultants.com/web-seo.html">
+    <meta property="og:image" content="https://modernbusinessconsultants.com/images/mbc-logo.png">
+    <link rel="canonical" href="https://modernbusinessconsultants.com/web-seo.html">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Web & SEO",
+        "description": "High-speed websites and SEO that captures leads while you sleep. Performance optimization, technical SEO, local SEO, and conversion rate optimization.",
+        "provider": { "@type": "Organization", "name": "Modern Business Consultants", "url": "https://modernbusinessconsultants.com" },
+        "areaServed": ["Austin, TX", "United States"],
+        "serviceType": "Web Development & SEO"
+    }
+    </script>
+    <meta name="geo.region" content="US-TX">
+    <meta name="geo.placename" content="Austin, Texas">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 
+    <link rel="preload" href="styles/index.css" as="style">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 </head>
@@ -23,6 +41,15 @@
 
 <header>
     <a href="index.html" class="logo">Modern Business <span>Consultants</span></a>
+    <nav id="main-nav">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#pricing">Plans</a>
+        <a href="index.html#contact" class="nav-cta">Get Started</a>
+    </nav>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
 </header>
 
 <main>
@@ -80,13 +107,35 @@
 </main>
 
 <footer>
+    <div class="footer-nav">
+        <div class="footer-col">
+            <h4>Services</h4>
+            <a href="managed-tech.html">Managed Tech</a>
+            <a href="financial-ops.html">Financial Ops</a>
+            <a href="web-seo.html">Web & SEO</a>
+            <a href="creative-media.html">Creative Media</a>
+            <a href="custom-apps.html">Custom Apps</a>
+        </div>
+        <div class="footer-col">
+            <h4>Plans</h4>
+            <a href="core.html">Starter</a>
+            <a href="growth.html">Growth</a>
+            <a href="accelerator.html">Partner</a>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <a href="michael.html">Michael Arriaga</a>
+            <a href="carson.html">Carson Fahrenort</a>
+            <a href="index.html#contact">Contact Us</a>
+        </div>
+    </div>
     <img src="images/mbc-logo.png" alt="Modern Business Consultants Logo" class="footer-logo" loading="lazy">
-    <p>&copy; 2025 Modern Business Consultants. All Rights Reserved.</p>
+    <p>&copy; 2026 Modern Business Consultants. All Rights Reserved.</p>
     <button class="mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
-        <span id="mode-icon">🌙</span> <span id="mode-text">Switch to Dark Mode</span>
+        <span id="mode-icon">&#127769;</span> <span id="mode-text">Switch to Dark Mode</span>
     </button>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/script.js" defer></script>
 </body>
 </html>

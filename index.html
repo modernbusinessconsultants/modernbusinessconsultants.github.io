@@ -10,15 +10,67 @@
     <meta property="og:title" content="Modern Business Consultants | Business. Accelerated">
     <meta property="og:description" content="We handle the tech, finance, and marketing noise so you can focus on running your business.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://modernworldcomputing.github.io/">
-    <meta property="og:image" content="https://modernworldcomputing.github.io/images/mbc-logo.png">
+    <meta property="og:url" content="https://modernbusinessconsultants.com/">
+    <meta property="og:image" content="https://modernbusinessconsultants.com/images/mbc-logo.png">
 
-    <link rel="canonical" href="https://modernworldcomputing.github.io/">
+    <link rel="canonical" href="https://modernbusinessconsultants.com/">
+    <meta name="geo.region" content="US-TX">
+    <meta name="geo.placename" content="Austin, Texas">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Modern Business Consultants",
+        "description": "We handle the tech, finance, and marketing noise so you can focus on running your business. Managed IT, financial operations, web & SEO, and creative media for small businesses.",
+        "url": "https://modernbusinessconsultants.com",
+        "logo": "https://modernbusinessconsultants.com/images/mbc-logo.png",
+        "image": "https://modernbusinessconsultants.com/images/mbc-logo.png",
+        "email": "modernbusinessconsultants@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Austin",
+            "addressRegion": "TX",
+            "addressCountry": "US"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Austin",
+                "containedInPlace": { "@type": "State", "name": "Texas" }
+            },
+            {
+                "@type": "Country",
+                "name": "United States"
+            }
+        ],
+        "priceRange": "$100-$500/mo",
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "MBC Services",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Managed Technology", "description": "IT support, security, and fleet management for small businesses" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Financial Operations", "description": "Bookkeeping, reconciliation, profit analysis, and CPA-ready reporting" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web & SEO", "description": "High-speed websites and search engine optimization for lead generation" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Creative Media", "description": "4K drone footage, photography, and video production" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Software", "description": "Custom business applications built around your exact workflow" } }
+            ]
+        },
+        "founder": [
+            { "@type": "Person", "name": "Michael Arriaga", "jobTitle": "Finance & Strategy" },
+            { "@type": "Person", "name": "Carson Fahrenfort", "jobTitle": "Tech & Operations" }
+        ],
+        "sameAs": []
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 
+    <link rel="preload" href="styles/index.css" as="style">
     <link rel="stylesheet" href="styles/index.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 </head>
@@ -26,12 +78,15 @@
 
 <header>
     <a href="index.html" class="logo">Modern Business <span>Consultants</span></a>
-    <nav>
-        <a href="#services">The Relief</a>
-        <a href="#about">The Duo</a>
+    <nav id="main-nav">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
         <a href="#pricing">Plans</a>
-        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-cta">Get Started</a>
     </nav>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+    </button>
 </header>
 
 <main>
@@ -89,24 +144,24 @@
         <div class="duo-section">
             <div class="duo-text">
                 <h2>The Duo Behind <span>MBC</span></h2>
-                <p>We aren't a faceless agency. We are Michael and Carson. We built MBC because we saw too many business owners getting bogged down by back-office chaos. We are the single point of contact for your growth.</p>
+                <p>We're not a faceless agency. We're Michael and Carson, and we built MBC to solve the real problems we kept hearing from business owners we've worked with. Michael is a digital and AI strategist who brings financial clarity and smarter systems to every business he touches. Carson is the technical innovator who makes sure everything runs, scales, and never breaks. One team. One call. Consider your plate cleared.</p>
             </div>
             <div class="duo-skills">
                 <a href="michael.html" class="skill-group bio-link">
-                    <p>Michael | Finance & Profit Strategy</p>
+                    <p>Michael | Digital Strategist & Financial Planner</p>
                     <div class="tag-container">
-                        <span class="tag">Financial Forecasting</span>
-                        <span class="tag">GAAP Accounting</span>
-                        <span class="tag">Cinematography</span>
+                        <span class="tag">Digital Strategist</span>
+                        <span class="tag">AI Strategist</span>
+                        <span class="tag">Financial Planner</span>
                     </div>
                     <span class="bio-arrow">View Bio &rarr;</span>
                 </a>
 
                 <a href="carson.html" class="skill-group bio-link">
-                    <p>Carson | Systems & Operations</p>
+                    <p>Carson | Technical Architect & IT Innovation</p>
                     <div class="tag-container">
-                        <span class="tag">Scalable IT Solutions</span>
-                        <span class="tag">Revenue-Focused Web/SEO</span>
+                        <span class="tag">IT Infrastructure</span>
+                        <span class="tag">Web & SEO Architecture</span>
                         <span class="tag">Licensed Drone Pilot</span>
                     </div>
                     <span class="bio-arrow">View Bio &rarr;</span>
@@ -117,50 +172,51 @@
 
     <section id="pricing">
         <div class="section-title">
-            <h2>Simple, Flat-Rate Peace of Mind.</h2>
-            <p>Predictable pricing. No hidden agency fees.</p>
+            <h2>Choose Your Starting Point.</h2>
+            <p>Every package is tailored to where you are and where you want to go. No contracts. No surprises.</p>
         </div>
         <div class="pricing-wrap">
             <a href="core.html" class="p-card">
-                <h3>MBC Core</h3>
-                <p>Managed Tech Foundation</p>
-                <div class="price">$100<span>/system/mo</span></div>
+                <h3>Starter</h3>
+                <p>Professional Web Presence</p>
+                <div class="price" style="font-size:1.6rem; letter-spacing:-0.5px;">Get Online Right</div>
                 <ul>
-                    <li>Mac & Windows fleet management</li>
-                    <li>OS updates & patch management</li>
-                    <li>Endpoint security configuration</li>
-                    <li>2 hours support per system/month</li>
+                    <li>Custom responsive website</li>
+                    <li>Mobile-optimized design</li>
+                    <li>Basic on-page SEO setup</li>
+                    <li>Google Business profile setup</li>
                 </ul>
-                <span class="learn-more">Learn More &rarr;</span>
+                <span class="learn-more">Book a Free Consultation &rarr;</span>
             </a>
 
             <a href="growth.html" class="p-card featured">
                 <span class="badge">Most Popular</span>
-                <h3>MBC Growth</h3>
-                <p>Tech + Marketing Hygiene</p>
-                <div class="price">$150+<span>/system/mo</span></div>
+                <h3>Growth</h3>
+                <p>Web + SEO Engine</p>
+                <div class="price" style="font-size:1.6rem; letter-spacing:-0.5px;">Built to Rank</div>
                 <ul>
-                    <li>Everything in Core</li>
-                    <li>Website & messaging review</li>
-                    <li>Google Business & local SEO</li>
-                    <li>Brand alignment across platforms</li>
+                    <li>Everything in Starter</li>
+                    <li>Full technical SEO strategy</li>
+                    <li>Local SEO & Google Maps dominance</li>
+                    <li>Monthly performance reporting</li>
                 </ul>
-                <span class="learn-more">Learn More &rarr;</span>
+                <span class="learn-more">Book a Free Consultation &rarr;</span>
             </a>
 
             <a href="accelerator.html" class="p-card">
-                <h3>MBC Accelerator</h3>
-                <p>Fractional Operations Team</p>
-                <div class="price">Custom</div>
+                <h3>Partner</h3>
+                <p>Full Digital Operations</p>
+                <div class="price" style="font-size:1.6rem; letter-spacing:-0.5px;">Your Growth Team</div>
                 <ul>
                     <li>Everything in Growth</li>
-                    <li>Fractional finance & operations</li>
-                    <li>Cash flow forecasting & modeling</li>
-                    <li>Strategic planning & execution</li>
+                    <li>Content strategy & creation</li>
+                    <li>Ongoing SEO optimization</li>
+                    <li>Priority support & strategy calls</li>
                 </ul>
-                <span class="learn-more">Learn More &rarr;</span>
+                <span class="learn-more">Book a Free Consultation &rarr;</span>
             </a>
         </div>
+        <p style="text-align:center; color:var(--text-dim); margin-top:3rem; font-size:1.05rem;">Already a web client? <strong style="color:var(--accent-pop);">Bundle any service and save.</strong> Add managed tech, financial ops, or creative media to your package at a reduced rate.</p>
     </section>
 
     <section id="faq">
@@ -180,8 +236,8 @@
         </div>
 
         <div class="faq-item" onclick="toggleFaq(this)" role="button" aria-expanded="false" tabindex="0">
-            <div class="faq-q">What's the difference between Growth and Accelerator? <span>+</span></div>
-            <div class="faq-a">Growth adds marketing and SEO hygiene on top of your tech foundation. Accelerator goes further by adding fractional finance and operations leadership. Think of it as hiring a COO and CFO without the six-figure salaries.</div>
+            <div class="faq-q">What's the difference between Growth and Partner? <span>+</span></div>
+            <div class="faq-a">Growth gives you a custom website plus a full SEO strategy to rank on Google. Partner takes it further — you get ongoing SEO optimization, content strategy, and priority support. Think of it as having a dedicated digital growth team without the overhead of hiring in-house.</div>
         </div>
 
         <div class="faq-item" onclick="toggleFaq(this)" role="button" aria-expanded="false" tabindex="0">
@@ -197,7 +253,7 @@
             <form class="contact-form" action="https://formsubmit.co/modernbusinessconsultants@gmail.com" method="POST">
                 <input type="hidden" name="_subject" value="New inquiry from MBC website">
                 <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://modernworldcomputing.github.io/index.html#contact">
+                <input type="hidden" name="_next" value="https://modernbusinessconsultants.com/index.html#contact">
                 <div class="form-row">
                     <input type="text" name="name" placeholder="Your Name" required aria-label="Your name">
                     <input type="email" name="email" placeholder="Your Email" required aria-label="Your email">
@@ -211,13 +267,35 @@
 </main>
 
 <footer>
+    <div class="footer-nav">
+        <div class="footer-col">
+            <h4>Services</h4>
+            <a href="managed-tech.html">Managed Tech</a>
+            <a href="financial-ops.html">Financial Ops</a>
+            <a href="web-seo.html">Web & SEO</a>
+            <a href="creative-media.html">Creative Media</a>
+            <a href="custom-apps.html">Custom Apps</a>
+        </div>
+        <div class="footer-col">
+            <h4>Plans</h4>
+            <a href="core.html">Starter</a>
+            <a href="growth.html">Growth</a>
+            <a href="accelerator.html">Partner</a>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <a href="michael.html">Michael Arriaga</a>
+            <a href="carson.html">Carson Fahrenfort</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </div>
     <img src="images/mbc-logo.png" alt="Modern Business Consultants Logo" class="footer-logo" loading="lazy">
-    <p>&copy; 2025 Modern Business Consultants. All Rights Reserved.</p>
+    <p>&copy; 2026 Modern Business Consultants. All Rights Reserved.</p>
     <button class="mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode">
-        <span id="mode-icon">🌙</span> <span id="mode-text">Switch to Dark Mode</span>
+        <span id="mode-icon">&#127769;</span> <span id="mode-text">Switch to Dark Mode</span>
     </button>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/script.js" defer></script>
 </body>
 </html>
