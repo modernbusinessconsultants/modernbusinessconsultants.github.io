@@ -99,6 +99,10 @@ nav a:hover {
     color: var(--accent-pop);
 }
 
+/* Nav Groups (visible only on mobile) */
+.nav-group { display: contents; }
+.nav-label { display: none; }
+
 /* Nav CTA Button */
 nav a.nav-cta {
     background: var(--accent-pop);
@@ -765,21 +769,50 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 2rem;
+        gap: 1.5rem;
         z-index: 999;
+        padding: 2rem;
+        overflow-y: auto;
     }
 
     nav.open { display: flex; }
 
     nav a {
         margin-left: 0;
-        font-size: 1.2rem;
+        font-size: 1rem;
+    }
+
+    .nav-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-group + .nav-group {
+        border-top: 1px solid var(--border);
+        padding-top: 1.25rem;
+    }
+
+    .nav-label {
+        display: block;
+        font-size: 0.65rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: var(--accent-pop);
+        margin-bottom: 0.25rem;
     }
 
     nav a.nav-cta {
         padding: 1rem 2.5rem;
         font-size: 1rem;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
     }
 
     section { padding: 4rem 1.5rem; }
