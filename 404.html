@@ -11,9 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
 
+    <link rel="preload" href="styles/index.css" as="style">
     <link rel="stylesheet" href="styles/index.css">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="32x32" href="favicon-32x32.png">
+    <script>try{if(localStorage.getItem('mbc-dark-mode')==='true')document.documentElement.classList.add('dark-mode')}catch(e){}</script>
 </head>
 <body>
 
@@ -97,6 +100,6 @@
     </button>
 </footer>
 
-<script src="js/script.js"></script>
+<script src="js/script.js" defer></script>
 </body>
 </html>

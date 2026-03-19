@@ -62,6 +62,7 @@ function toggleMenu() {
     var btn = document.querySelector('.menu-toggle');
     if (nav) nav.classList.toggle('open');
     if (btn) btn.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
 }
 
 /* Close mobile menu when a nav link is clicked */
@@ -72,6 +73,17 @@ document.addEventListener('DOMContentLoaded', function() {
             var btn = document.querySelector('.menu-toggle');
             if (nav) nav.classList.remove('open');
             if (btn) btn.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
+    });
+
+    /* FAQ keyboard accessibility — Enter/Space triggers toggle */
+    document.querySelectorAll('.faq-item[role="button"]').forEach(function(item) {
+        item.addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleFaq(this);
+            }
         });
     });
 });

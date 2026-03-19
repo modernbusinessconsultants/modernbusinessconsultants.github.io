@@ -21,9 +21,10 @@
 
     <link rel="preload" href="styles/index.css" as="style">
     <link rel="stylesheet" href="styles/index.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon-32x32.png">
+    <link rel="apple-touch-icon" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <script>try{if(localStorage.getItem('mbc-dark-mode')==='true')document.documentElement.classList.add('dark-mode')}catch(e){}</script>
 </head>
 <body>
 
@@ -52,25 +53,25 @@
 
             <div class="showcase-grid">
                 <div class="showcase-item">
-                    <img src="images/drone1.JPG" alt="Aerial view of neighborhood from 400 feet" loading="lazy" onclick="openLightbox(this.src)">
+                    <img src="images/drone1.JPG" alt="Aerial view of neighborhood from 400 feet" loading="lazy" onclick="openLightbox(this.src)" tabindex="0" role="button" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(this.src)}">
                     <div class="caption">
-                        <h3>Site Overview</h3>
+                        <h2>Site Overview</h2>
                         <p>Capture of neighborhood from 400ft above</p>
                     </div>
                 </div>
 
                 <div class="showcase-item">
-                    <img src="images/drone2.JPG" alt="Aerial landscape showing environmental context" loading="lazy" onclick="openLightbox(this.src)">
+                    <img src="images/drone2.JPG" alt="Aerial landscape showing environmental context" loading="lazy" onclick="openLightbox(this.src)" tabindex="0" role="button" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(this.src)}">
                     <div class="caption">
-                        <h3>Landscape</h3>
+                        <h2>Landscape</h2>
                         <p>Environmental context and surroundings</p>
                     </div>
                 </div>
 
                 <div class="showcase-item">
-                    <img src="images/drone3.JPG" alt="Aerial landscape with surrounding terrain" loading="lazy" onclick="openLightbox(this.src)">
+                    <img src="images/drone3.JPG" alt="Aerial landscape with surrounding terrain" loading="lazy" onclick="openLightbox(this.src)" tabindex="0" role="button" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openLightbox(this.src)}">
                     <div class="caption">
-                        <h3>Landscape</h3>
+                        <h2>Landscape</h2>
                         <p>Environmental context and surroundings</p>
                     </div>
                 </div>
@@ -103,7 +104,7 @@
         <div class="footer-col">
             <h4>Company</h4>
             <a href="michael.html">Michael Arriaga</a>
-            <a href="carson.html">Carson Fahrenort</a>
+            <a href="carson.html">Carson Fahrenfort</a>
             <a href="index.html#contact">Contact Us</a>
         </div>
     </div>

@@ -20,7 +20,7 @@
     --hero-grad: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
 }
 
-body.dark-mode {
+.dark-mode {
     --bg: #020617;
     --section-alt: #0f172a;
     --card-bg: #1e293b;
@@ -67,7 +67,7 @@ header {
     border-bottom: 1px solid var(--border);
 }
 
-body.dark-mode header {
+.dark-mode header {
     background: rgba(2, 6, 23, 0.85);
 }
 
@@ -350,7 +350,7 @@ a.skill-group:hover {
     letter-spacing: 0.5px;
 }
 
-body.dark-mode .tag {
+.dark-mode .tag {
     background: rgba(59, 130, 246, 0.15);
     color: #93c5fd;
 }
@@ -443,12 +443,12 @@ a.p-card.featured {
     box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
 }
 
-body.dark-mode .badge { color: #ffffff; }
+.dark-mode .badge { color: #ffffff; }
 
 a.p-card:hover { transform: translateY(-8px); border-color: var(--accent-pop); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1); }
 a.p-card.featured:hover { transform: scale(1.08); }
 
-.price { font-size: 3rem; font-weight: 800; margin: 1rem 0; letter-spacing: -2px; }
+.price { font-size: 1.6rem; font-weight: 800; margin: 1rem 0; letter-spacing: -0.5px; }
 .price span { font-size: 1rem; color: var(--text-dim); font-weight: 400; letter-spacing: 0; }
 
 /* --- FAQ --- */
@@ -460,7 +460,8 @@ a.p-card.featured:hover { transform: scale(1.08); }
 
 .faq-q { font-weight: 700; display: flex; justify-content: space-between; font-size: 1.1rem; }
 .faq-a { max-height: 0; overflow: hidden; color: var(--text-dim); margin-top: 0; transition: all 0.3s ease; font-size: 0.95rem; }
-.faq-item.active .faq-a { max-height: 200px; margin-top: 1.25rem; }
+.faq-item.active .faq-a { max-height: 500px; margin-top: 1.25rem; }
+body.menu-open { overflow: hidden; }
 
 /* --- CTA Sections (replaces inline styles on contact/back sections) --- */
 .cta-section {
