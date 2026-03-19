@@ -99,8 +99,8 @@ nav a:hover {
     color: var(--accent-pop);
 }
 
-/* Nav Groups (visible only on mobile) */
-.nav-group { display: contents; }
+/* Mobile nav (hidden on desktop) */
+.nav-mobile { display: none; }
 .nav-label { display: none; }
 
 /* Nav CTA Button */
@@ -758,6 +758,8 @@ footer {
 
     .menu-toggle { display: flex; }
 
+    .nav-desktop { display: none !important; }
+
     nav {
         display: none;
         position: fixed;
@@ -776,6 +778,14 @@ footer {
     }
 
     nav.open { display: flex; }
+
+    nav.open .nav-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        width: 100%;
+    }
 
     nav a {
         margin-left: 0;
