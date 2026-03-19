@@ -128,7 +128,7 @@ nav a.nav-cta:hover {
     border: none;
     cursor: pointer;
     padding: 0.5rem;
-    z-index: 1001;
+    z-index: 10000;
 }
 
 .menu-toggle span {
@@ -760,26 +760,28 @@ footer {
 
     .nav-desktop { display: none !important; }
 
-    nav {
+    #main-nav {
         display: none;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
+        width: 100vw;
+        height: 100vh;
         background: var(--bg);
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 1.5rem;
-        z-index: 999;
+        z-index: 9999;
         padding: 2rem;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
-    nav.open { display: flex; }
+    #main-nav.open { display: flex; }
 
-    nav.open .nav-mobile {
+    #main-nav.open .nav-mobile {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -787,7 +789,7 @@ footer {
         width: 100%;
     }
 
-    nav a {
+    #main-nav a {
         margin-left: 0;
         font-size: 1rem;
     }
@@ -816,7 +818,7 @@ footer {
         margin-bottom: 0.25rem;
     }
 
-    nav a.nav-cta {
+    #main-nav a.nav-cta {
         padding: 1rem 2.5rem;
         font-size: 1rem;
         margin-top: 0.5rem;
