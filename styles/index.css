@@ -58,6 +58,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: nowrap;
+    gap: 1rem;
     position: fixed;
     width: 100%;
     top: 0;
@@ -78,21 +80,32 @@ header {
     letter-spacing: -1px;
     text-transform: uppercase;
     text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .logo span {
     color: var(--accent-pop);
 }
 
+#main-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 1;
+    min-width: 0;
+}
+
 /* Navigation Links */
 nav a {
     color: var(--text-main);
-    margin-left: 2rem;
-    font-size: 0.8rem;
+    margin-left: 1.25rem;
+    font-size: 0.75rem;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
 }
 
 nav a:hover {
@@ -103,13 +116,15 @@ nav a:hover {
 .nav-mobile { display: none; }
 .nav-label { display: none; }
 
-/* Nav CTA Button */
+/* Nav CTA Button — never wrap "Free Consultation" into a broken pill */
 nav a.nav-cta {
     background: var(--accent-pop);
     color: #ffffff !important;
-    padding: 0.6rem 1.4rem;
+    padding: 0.55rem 1.1rem;
     border-radius: 6px;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    flex-shrink: 0;
     transition: background 0.2s ease, transform 0.2s ease;
 }
 
@@ -279,6 +294,18 @@ a.card:hover {
 .card-desc {
     color: var(--text-dim);
     font-size: 0.95rem;
+}
+
+/* Owner bio headshots (About page) — tighter face framing */
+.bio-photo {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center 18%;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+    display: block;
+    background: var(--section-alt);
 }
 
 /* Card internal link */
@@ -462,6 +489,7 @@ a.p-card.featured:hover { transform: scale(1.08); }
     cursor: pointer;
 }
 
+h3.faq-q,
 .faq-q { font-weight: 700; display: flex; justify-content: space-between; font-size: 1.1rem; }
 .faq-a { max-height: 0; overflow: hidden; color: var(--text-dim); margin-top: 0; transition: all 0.3s ease; font-size: 0.95rem; }
 .faq-item.active .faq-a { max-height: 500px; margin-top: 1.25rem; }
@@ -752,10 +780,8 @@ footer {
 /* --- Contact Section --- */
 #contact { margin: 6rem auto; padding: 0 1.5rem; }
 
-/* --- Responsive: Tablet & Small Desktop --- */
-@media (max-width: 850px) {
-    .grid { grid-template-columns: 1fr; }
-
+/* --- Responsive: mid-width desktop / half monitor — hamburger before nav wraps --- */
+@media (max-width: 1100px) {
     .menu-toggle { display: flex; }
 
     .nav-desktop { display: none !important; }
@@ -777,6 +803,7 @@ footer {
         padding: 2rem;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+        flex-wrap: nowrap;
     }
 
     #main-nav.open { display: flex; }
@@ -792,6 +819,7 @@ footer {
     #main-nav a {
         margin-left: 0;
         font-size: 1rem;
+        white-space: normal;
     }
 
     .nav-group {
@@ -825,7 +853,13 @@ footer {
         width: 100%;
         max-width: 280px;
         text-align: center;
+        white-space: nowrap;
     }
+}
+
+/* --- Responsive: Tablet & Small Desktop --- */
+@media (max-width: 850px) {
+    .grid { grid-template-columns: 1fr; }
 
     section { padding: 4rem 1.5rem; }
     .hero { padding: 8rem 1.5rem 5rem; }
@@ -892,7 +926,8 @@ footer {
     .contact-section h2 { font-size: 1.8rem; }
     #contact { margin: 3rem auto; }
 
-    .faq-q { font-size: 0.95rem; }
+    h3.faq-q,
+.faq-q { font-size: 0.95rem; }
 
     .showcase-item { height: 280px; }
 
@@ -901,4 +936,13 @@ footer {
     .footer-logo { height: 60px; }
     footer { padding: 2.5rem 1rem 1.5rem; }
     .footer-nav { gap: 1.5rem; }
+}
+
+
+/* FAQ questions as headings for SEO/outline */
+h3.faq-q {
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
 }
