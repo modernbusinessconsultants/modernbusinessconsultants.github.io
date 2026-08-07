@@ -1,6 +1,6 @@
 # modernbusinessconsultants.github.io
 
-Static website for **Modern Business Consultants** - a business advisory firm helping small and mid-sized businesses increase profit through financial advisory, sales advisory, and technology advisory.
+Static website for **Modern Business Consultants**, a business advisory firm helping small and mid sized businesses increase profit through financial advisory, sales advisory, and technology advisory.
 
 ## Live site
 
@@ -12,9 +12,9 @@ Static website for **Modern Business Consultants** - a business advisory firm he
 | Page | File |
 |------|------|
 | Home | `index.html` |
-| Financial Advisory | `financial-advisory.html` |
-| Sales Advisory | `sales-advisory.html` |
-| Business Technology Services | `business-technology-services.html` |
+| Financial Advisory | `financial advisory.html` |
+| Sales Advisory | `sales advisory.html` |
+| Business Technology Services | `business technology services.html` |
 | About | `about.html` |
 | Contact / Free Consultation | `contact.html` |
 
